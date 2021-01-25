@@ -23,7 +23,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-<img src="https://gph.is/g/ZrW8Yjd" width=250><br>
+<img src="https://media.giphy.com/media/Jp7OqhstVWfssTn8u0/giphy.gif" width=250><br>
 
 ### Notes
 The Android emulator had an error called "ADB binary is obsolete" and showed a black screen, but when I opened another emulator it worked just fine.
