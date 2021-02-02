@@ -37,4 +37,19 @@
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         tools:text="27 years" />
+
+    <TextView
+        android:id="@+id/tvRelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        tools:text="2020-01-20" />
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        tools:text="EN" />
+
 </LinearLayout>

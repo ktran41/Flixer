@@ -31,6 +31,8 @@ public class DetailActivity extends YouTubeBaseActivity {
     TextView tvOverview;
     RatingBar ratingBar;
     YouTubePlayerView youTubePlayerView;
+    TextView tvRelease;
+    TextView tvLanguage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +43,15 @@ public class DetailActivity extends YouTubeBaseActivity {
         tvOverview = findViewById(R.id.tvOverview);
         ratingBar = findViewById(R.id.ratingBar);
         youTubePlayerView = findViewById(R.id.player);
+        tvRelease = findViewById(R.id.tvRelease);
+        tvLanguage = findViewById(R.id.tvLanguage);
 
         Movie movie = Parcels.unwrap(getIntent().getParcelableExtra("movie"));
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
         ratingBar.setRating((float)movie.getRating());
+        tvRelease.setText(String.format("Release Date: %s", movie.getDate()));
+        tvLanguage.setText(String.format("Original Language: %s", movie.getLanguage()));
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(String.format(VIDEOS_URL, movie.getMovieId()), new JsonHttpResponseHandler() {
@@ -79,7 +85,7 @@ public class DetailActivity extends YouTubeBaseActivity {
                 Log.d("DetailActivity", "onInitializationSuccess");
                 youTubePlayer.cueVideo(youtubeKey);
                 Movie movie = Parcels.unwrap(getIntent().getParcelableExtra("movie"));
-                if (movie.getRating() > 5) {
+                if ((int)movie.getRating() > 5) {
                     youTubePlayer.loadVideo(youtubeKey);
                 }
             }
