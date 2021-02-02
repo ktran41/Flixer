@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="0dp"
     android:layout_marginTop="0dp"
-    android:background="#494747"
-    android:outlineAmbientShadowColor="#0B0B0B">
+    android:background="#272525">
 
     <ImageView
         android:id="@+id/ivPoster"
@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:outlineAmbientShadowColor="#100F0F"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -25,10 +24,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:textColor="#FAF9F9"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         tools:text="Title" />
@@ -39,8 +38,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:textColor="#FAF8F8"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
         tools:text="Overview..." />
+
 </RelativeLayout>
